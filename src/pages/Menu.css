@@ -1,0 +1,29 @@
+#menu-container {
+    position: fixed;
+    display: inline-block;
+    margin: 0;
+    width: 20vw;
+    height: 100vh;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 0.2vh 0px 0.5vw rgb(0, 0, 0);
+}
+
+#menu-container > a{
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 2.3em;
+    text-align: left;
+    text-decoration-line: none;
+    padding-left: 2vw;
+    padding-top: 13vh;
+    padding-bottom: 12vh;
+    transition: background-color 2s;
+}
+
+#menu-container > a:hover:not(.selected) {
+    background-color: rgb(53, 53, 53);
+}
+
+.selected {
+    background-color: rgb(53, 53, 53);
+}
