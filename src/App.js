@@ -18,16 +18,16 @@ const App = () => {
     <div>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element = {<><Menu selected_element={"all"} /><CalendarList current_page={""}/></>}></Route>
-          <Route path="/front" element = {<><Menu selected_element={"front"} /><CalendarList current_page={"/front"}/></>}></Route>
-          <Route path="/back" element = {<><Menu selected_element={"back"} /><CalendarList current_page={"/back"}/></>}></Route>
+          <Route path="/movies_combine" element = {<><Menu selected_element={"all"} /><CalendarList current_page={""}/></>}></Route>
+          <Route path="/movies_combine/front" element = {<><Menu selected_element={"front"} /><CalendarList current_page={"/front"}/></>}></Route>
+          <Route path="/movies_combine/back" element = {<><Menu selected_element={"back"} /><CalendarList current_page={"/back"}/></>}></Route>
 
           {
             week_list.map((week) => {
               return <>
-                <Route key={`all${week}`} path={`/${week}`} element = {<><Menu selected_element={"all"} /><AllPage week={week}/></>}></Route>
-                <Route key={`front${week}`} path={`/front/${week}`} element = {<><Menu selected_element={"front"} /><FrontPage week={week}/></>}></Route>
-                <Route key={`back${week}`} path={`/back/${week}`} element = {<><Menu selected_element={"back"} /><BackPage week={week}/></>}></Route>
+                <Route key={`all${week}`} path={`/movies_combine/${week}`} element = {<><Menu selected_element={"all"} /><AllPage week={week}/></>}></Route>
+                <Route key={`front${week}`} path={`/movies_combine/front/${week}`} element = {<><Menu selected_element={"front"} /><FrontPage week={week}/></>}></Route>
+                <Route key={`back${week}`} path={`/movies_combine/back/${week}`} element = {<><Menu selected_element={"back"} /><BackPage week={week}/></>}></Route>
               </>
             })
           }
