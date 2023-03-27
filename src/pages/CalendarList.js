@@ -21,7 +21,7 @@ const CalendarList = ({current_page}) => {
         <ul id="calendar-container">
             {
                 week_list.map((week, idx) => {
-                    return <a key={idx} id="week-box" href={`/movies_combine${current_page}/${week.split("(")[0]}`}>{week}</a>
+                    return <a key={idx} id="week-box" href={`/${current_page}/${week.split("(")[0]}`}>{week}</a>
                 })
             }
         </ul>
