@@ -7,7 +7,7 @@ const convert_date_to_string = (index) => {
     const [start_month, start_day, ] = start_date.toLocaleDateString().split("/");
     const [end_month, end_day, ] = end_date.toLocaleDateString().split("/");
 
-    return `(${start_month}월 ${start_day}일 ~ ${end_month}월 ~ ${end_day}일)`
+    return `(${start_month}월 ${start_day}일 ~ ${end_month}월 ${end_day}일)`
 }
 
 const CalendarList = ({current_page}) => {
